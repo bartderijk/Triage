@@ -47,9 +47,9 @@
 export default {
   name: 'emvCalculator',
   data: () => ({
-    eye: 0,
-    movement: 0,
-    verbal: 0
+    eye: 4,
+    movement: 5,
+    verbal: 6
   }),
   computed: {
     emvScore() {
