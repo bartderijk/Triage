@@ -1,10 +1,10 @@
 <template>
 <div>
-  <input v-model="eye" type="number"/>
-  <input v-model="movement" type="number"/>
-  <input v-model="verbal" type="number"/>
+  <input v-model.number="eye" type="number"/>
+  <input v-model.number="movement" type="number"/>
+  <input v-model.number="verbal" type="number"/>
 
-  <h1>{{eye + movement + verbal}}</h1>
+  <h1>{{ emvScore }}</h1>
 </div>
 </template>
 
@@ -15,7 +15,12 @@ export default {
     eye: 0,
     movement: 0,
     verbal: 0
-  })
+  }),
+  computed: {
+    emvScore() {
+      return this.eye + this.movement + this.verbal
+    }
+  }
 }
 </script>
 
