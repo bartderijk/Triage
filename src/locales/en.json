@@ -1,0 +1,18 @@
+{
+  "emvScore": "EMV score: {score}",
+  "eye": "Eye: {score}",
+  "motor": "Motor: {score}",
+  "verbal": "Verbal: {score}",
+  "spontaneous": "Spontaneous",
+  "pain": "Pain",
+  "noReaction": "No reaction",
+  "oriented": "Oriented",
+  "confused": "Confused",
+  "inappropriateResponses": "Inappropriate responses",
+  "incomprehensibleSpeech": "Incomprehensible speech",
+  "obeysCommands": "Obeys commands",
+  "localisesPain": "Localises pain",
+  "painWithdrawal": "Pain withdrawal",
+  "painFlexion": "Pain extension",
+  "painExtension": "Pain extension"
+}
