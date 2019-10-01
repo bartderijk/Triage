@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div class="col-sm">
-        <label for="eye">{{ $t("eye", { score: eye }) }}</label><br>
+        <label for="eye">{{ $t("labels.eye", { score: eye }) }}</label><br>
         <select id="eye" v-model.number="eye">
           <option value="4">{{ $t("spontaneous") }}</option>
           <option value="3">{{ $t("verbal") }}</option>
@@ -17,7 +17,7 @@
       </div>
 
       <div class="col-sm">
-        <label for="motor">{{ $t("motor", { score: motor }) }}</label><br>
+        <label for="motor">{{ $t("labels.motor", { score: motor }) }}</label><br>
         <select id="motor" v-model.number="motor">
           <option value="6">{{ $t("obeysCommands") }}</option>
           <option value="5">{{ $t("localisesPain") }}</option>
@@ -29,7 +29,7 @@
       </div>
 
       <div class="col-sm">
-        <label for="verbal">{{ $t("verbal", { score: verbal }) }}</label><br>
+        <label for="verbal">{{ $t("labels.verbal", { score: verbal }) }}</label><br>
         <select id="verbal" v-model.number="verbal">
           <option value="5">{{ $t("oriented") }}</option>
           <option value="4">{{ $t("confused") }}</option>

@@ -1,8 +1,11 @@
 {
   "emvScore": "EMV score: {score}",
-  "eye": "Eye: {score}",
-  "motor": "Motor: {score}",
-  "verbal": "Verbal: {score}",
+  "labels": {
+    "eye": "Eye: {score}",
+    "motor": "Motor: {score}",
+    "verbal": "Verbal: {score}"
+  },
+  "verbal": "Verbal",
   "spontaneous": "Spontaneous",
   "pain": "Pain",
   "noReaction": "No reaction",
