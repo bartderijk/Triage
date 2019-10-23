@@ -1,5 +1,6 @@
 {
   "emvScore": "EMV score: {score}",
+  "rtsScore": "RTS score: {score}",
   "labels": {
     "eye": "Eye: {score}",
     "motor": "Motor: {score}",
