@@ -65,6 +65,7 @@ export default {
   }
 
   select { 
-    max-width: 260px; 
+    min-width: 260px;
+    height: 32px;
   }
 </style>
