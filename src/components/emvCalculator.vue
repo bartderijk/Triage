@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>{{ $t("emvScore", { score: emvScore }) }}</h1>
+        <h1 class="app-title">{{ $t("emvScore", { score: emvScore }) }}</h1>
       </div>
     </div>
     <div class="row">
@@ -60,6 +60,10 @@ export default {
 </script>
 
 <style scoped>
+  .app-title {
+    margin: 16px 0;
+  }
+
   select { 
     max-width: 260px; 
   }
