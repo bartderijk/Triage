@@ -18,5 +18,28 @@
   "localisesPain": "Localises pain",
   "painWithdrawal": "Pain withdrawal",
   "painFlexion": "Pain extension",
-  "painExtension": "Pain extension"
+  "painExtension": "Pain extension",
+  "helpText": {
+    "eye": [
+      "None",
+      "Opens to pain, not applied to face",
+      "Opens to verbal command, speech, or shout",
+      "Spontaneous–open with blinking at baseline"
+    ],
+    "motor": [
+      "None",
+      "Extensor (rigid) response, decerebrate posture",
+      "Abnormal (spastic) flexion, decorticate posture",
+      "Withdraws from pain",
+      "Purposeful movement to painful stimulus",
+      "Obeys commands for movement"
+    ],
+    "verbal": [
+      "None",
+      "Incomprehensible speech",
+      "Inappropriate responses, words discernible",
+      "Confused conversation, but able to answer questions",
+      "Oriented"
+    ]
+  }
 }

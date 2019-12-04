@@ -17,6 +17,7 @@
               </select>
             </div>
           </div>
+          <p class="help">{{ helpTextEye }}</p>
       </div>
       <div class="field">
           <label class="label" for="motor">{{ $t("labels.motor", { score: motor }) }}</label>
@@ -32,6 +33,7 @@
               </select>
             </div>
           </div>
+          <p class="help">{{ helpTextMotor }}</p>
       </div>
       <div class="field">
         <label class="label" for="verbal">{{ $t("labels.verbal", { score: verbal }) }}</label>
@@ -46,6 +48,7 @@
             </select>
           </div>
         </div>
+        <p class="help">{{ helpTextVerbal }}</p>
       </div>
   </section>
 </template>
@@ -59,9 +62,10 @@ export default {
     verbal: 5
   }),
   computed: {
-    emvScore() {
-      return this.eye + this.motor + this.verbal
-    }
+    emvScore() { return this.eye + this.motor + this.verbal },
+    helpTextEye() { return this.$t(`helpText.eye[ ${ this.eye - 1 } ]`) },
+    helpTextMotor() { return this.$t(`helpText.motor[ ${ this.motor - 1 } ]`) },
+    helpTextVerbal() { return this.$t(`helpText.verbal[ ${ this.verbal - 1 } ]`) }
   }
 }
 </script>
