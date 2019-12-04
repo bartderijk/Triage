@@ -1,12 +1,9 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1 class="app-title">{{ $t("emvScore", { score: emvScore }) }}</h1>
-      </div>
+  <section class="section">
+    <div class="container">
+        <h1 class="title">{{ $t("emvScore", { score: emvScore }) }}</h1>
     </div>
-    <div class="row">
-      <div class="col-sm">
+    <div class="container">
         <label for="eye">{{ $t("labels.eye", { score: eye }) }}</label><br>
         <select id="eye" v-model.number="eye">
           <option value="4">{{ $t("spontaneous") }}</option>
@@ -14,9 +11,8 @@
           <option value="2">{{ $t("pain") }}</option>
           <option value="1">{{ $t("noReaction") }}</option>
         </select>
-      </div>
-
-      <div class="col-sm">
+    </div>
+    <div class="container">
         <label for="motor">{{ $t("labels.motor", { score: motor }) }}</label><br>
         <select id="motor" v-model.number="motor">
           <option value="6">{{ $t("obeysCommands") }}</option>
@@ -26,9 +22,8 @@
           <option value="2">{{ $t("painExtension") }}</option>
           <option value="1">{{ $t("noReaction") }}</option>
         </select>
-      </div>
-
-      <div class="col-sm">
+    </div>
+    <div class="container">
         <label for="verbal">{{ $t("labels.verbal", { score: verbal }) }}</label><br>
         <select id="verbal" v-model.number="verbal">
           <option value="5">{{ $t("oriented") }}</option>
@@ -37,9 +32,8 @@
           <option value="2">{{ $t("incomprehensibleSpeech") }}</option>
           <option value="1">{{ $t("noReaction") }}</option>
         </select>
-      </div>
-  </div>
-</div>
+    </div>
+</section>
 
 </template>
 
@@ -60,12 +54,12 @@ export default {
 </script>
 
 <style scoped>
-  .app-title {
+  /* .app-title {
     margin: 16px 0;
   }
 
   select { 
     min-width: 260px;
     height: 32px;
-  }
+  } */
 </style>
