@@ -4,7 +4,10 @@
   "labels": {
     "eye": "Eye: {score}",
     "motor": "Motor: {score}",
-    "verbal": "Verbal: {score}"
+    "verbal": "Verbal: {score}",
+    "gcs": "GCS: {score}",
+    "sbp": "Systolic blood pressure: {score}",
+    "rr": "Repiratory rate: {score}"
   },
   "verbal": "Verbal",
   "spontaneous": "Spontaneous",
@@ -40,6 +43,9 @@
       "Inappropriate responses, words discernible",
       "Confused conversation, but able to answer questions",
       "Oriented"
-    ]
+    ],
+    "gcs": "Based on the GCS (EMV) of {gcs} a score of {score} was assigned",
+    "sbp": "Based on the systolic blood pressure a score of {score} was assigned",
+    "rr": "Based on the respiratory rate a score of {score} was assigned"
   }
 }
