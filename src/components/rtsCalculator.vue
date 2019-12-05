@@ -2,7 +2,7 @@
   <section class="section">
       <div class="container">
         <h1 class="title">
-          {{ $t("rtsScore", { score: rtsScore }) }}
+          {{ $t("rtsScore", { score: rts }) }}
         </h1>
         <div class="field">
             <label class="label">{{ $t("labels.gcs", { score: gcsRtsScore }) }}</label>
@@ -48,14 +48,51 @@
 <script>
 export default {
   name: 'rtsCalculator',
-  data: () => ({
-    gcs: 15,
-    gcsRtsScore: 4,
-    sbpRtsScore: 4,
-    rrRtsScore: 4
-  }),
   computed: {
-    rtsScore() { return this.gcsRtsScore + this.sbpRtsScore + this.rrRtsScore }
+    gcs() {
+      return this.$store.getters.gcs;
+    },
+    rts() { 
+      return this.$store.getters.rts;
+    },
+    sbpRtsScore: {
+      get() {
+        return this.$store.state.sbpRtsScore;
+      },
+      set(value) {
+        this.$store.commit('setSbpRtsScore', value);
+      }
+    },
+    rrRtsScore: {
+      get() {
+        return this.$store.state.rrRtsScore;
+      },
+      set(value) {
+        this.$store.commit('setRrRtsScore', value);
+      }
+    },
+    gcsRtsScore: {
+      get() {
+        return this.$store.state.gcsRtsScore;
+      },
+      set() {
+        let gcsRtsScore;
+
+        if (this.gcs <= 15 && this.gcs >= 13) {
+          gcsRtsScore = 4;
+        } else if (this.gcs <= 12 && this.gcs >= 9) {
+          gcsRtsScore = 3;
+        } else if (this.gcs <= 8 && this.gcs >= 6) {
+          gcsRtsScore = 2;
+        } else if (this.gcs === 5 || this.gcs === 4) {
+          gcsRtsScore = 1;
+        } else {
+          gcsRtsScore = 0;
+        }
+
+        this.$store.commit('setGcsRtsScore', gcsRtsScore);
+      }
+    }
   }
 }
 </script>
