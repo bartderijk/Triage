@@ -1,8 +1,11 @@
 <template>
-  <div id="app">
-    <emvCalculator/>
-    <hr>
-    <rtsCalculator/>
+  <div class="columns">
+    <div class="column">
+      <emvCalculator/>
+    </div>
+    <div class="column">
+      <rtsCalculator/>
+    </div>
   </div>
 </template>
 
