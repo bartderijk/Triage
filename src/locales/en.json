@@ -1,5 +1,5 @@
 {
-  "emvScore": "EMV score: {score}",
+  "gcsScore": "GCS score: {score}",
   "rtsScore": "RTS score: {score}",
   "labels": {
     "eye": "Eye: {score}",

@@ -2,7 +2,7 @@
   <section class="section">
       <div class="container">
         <h1 class="title">
-          {{ $t("emvScore", { score: emvScore }) }}
+          {{ $t("gcsScore", { score: emvScore }) }}
         </h1>
         <div class="field">
             <label class="label" for="eye">{{ $t("labels.eye", { score: eye }) }}</label>
