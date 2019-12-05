@@ -2,7 +2,7 @@
   <section class="section">
       <div class="container">
         <h1 class="title">
-          {{ $t("gcsScore", { score: emvScore }) }}
+          {{ $t("gcsScore", { score: gcs }) }}
         </h1>
         <div class="field">
             <label class="label" for="eye">{{ $t("labels.eye", { score: eye }) }}</label>
@@ -16,7 +16,7 @@
                 </select>
               </div>
             </div>
-            <p class="help">{{ helpTextEye }}</p>
+            <p v-if="eye" class="help">{{ helpTextEye }}</p>
         </div>
         <div class="field">
             <label class="label" for="motor">{{ $t("labels.motor", { score: motor }) }}</label>
@@ -32,7 +32,7 @@
                 </select>
               </div>
             </div>
-            <p class="help">{{ helpTextMotor }}</p>
+            <p v-if="motor" class="help">{{ helpTextMotor }}</p>
         </div>
         <div class="field">
           <label class="label" for="verbal">{{ $t("labels.verbal", { score: verbal }) }}</label>
@@ -47,22 +47,44 @@
               </select>
             </div>
           </div>
-          <p class="help">{{ helpTextVerbal }}</p>
+          <p v-if="verbal" class="help">{{ helpTextVerbal }}</p>
         </div>
       </div>
   </section>
 </template>
 
 <script>
+
 export default {
   name: 'emvCalculator',
-  data: () => ({
-    eye: 4,
-    motor: 6,
-    verbal: 5
-  }),
   computed: {
-    emvScore() { return this.eye + this.motor + this.verbal },
+    gcs() {
+      return this.$store.getters.gcs;
+    },
+    eye: {
+      get() {
+        return this.$store.state.eye
+      },
+      set(value) {
+        this.$store.commit('setEye', value)
+      }
+    },
+    motor: {
+      get() {
+        return this.$store.state.motor
+      },
+      set(value) {
+        this.$store.commit('setMotor', value)
+      }
+    },
+    verbal: {
+      get() {
+        return this.$store.state.verbal
+      },
+      set(value) {
+        this.$store.commit('setVerbal', value)
+      }
+    },
     helpTextEye() { return this.$t(`helpText.eye[ ${ this.eye - 1 } ]`) },
     helpTextMotor() { return this.$t(`helpText.motor[ ${ this.motor - 1 } ]`) },
     helpTextVerbal() { return this.$t(`helpText.verbal[ ${ this.verbal - 1 } ]`) }
