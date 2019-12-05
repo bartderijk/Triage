@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'emvCalculator',
+  name: 'rtsCalculator',
   data: () => ({
     gcs: 15,
     gcsRtsScore: 4,
