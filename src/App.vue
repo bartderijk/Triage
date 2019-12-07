@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="columns">
+  <div class="columns t3">
     <div class="column">
       <emvCalculator/>
     </div>
@@ -33,6 +33,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+  @import "../node_modules/bulma/bulma.sass";
+  .t1, .t2, .t3, .t4 { transition: background-color .3s ease-in-out; }
+ .t1 { background-color: $red; }
+ .t2 { background-color: $yellow; }
+ .t3 { background-color: $green; }
+ .t4 { background-color: $grey-lighter; }
 </style>
