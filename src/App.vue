@@ -1,6 +1,6 @@
 <template>
-<div>
-  <div class="columns t3">
+<div :class="triageClass">
+  <div class="columns">
     <div class="column">
       <emvCalculator/>
     </div>
@@ -29,6 +29,20 @@ export default {
   components: {
     emvCalculator,
     rtsCalculator
+  },
+  computed: {
+    triageClass() {
+      const rts = this.$store.getters.rts;
+      if (rts === 12) {
+        return 't3';
+      } else if (rts === 11) {
+        return 't2';
+      } else if (rts >= 3 && rts <= 10) {
+        return 't1';
+      } else {
+        return 't4';
+      }
+    }
   }
 }
 </script>
