@@ -71,11 +71,8 @@ export default {
         this.$store.commit('setRrRtsScore', value);
       }
     },
-    gcsRtsScore: {
-      get() {
-        return this.$store.state.gcsRtsScore;
-      },
-      set() {
+    gcsRtsScore() {
+        // @TODO Consider moving this to the store
         let gcsRtsScore;
 
         if (this.gcs <= 15 && this.gcs >= 13) {
@@ -91,7 +88,8 @@ export default {
         }
 
         this.$store.commit('setGcsRtsScore', gcsRtsScore);
-      }
+        
+        return gcsRtsScore;
     }
   }
 }
