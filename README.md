@@ -19,6 +19,9 @@ On the todo list:
 - User testing
 - Promoting and getting it out there
 
+For a complete overview, check out the tickets on Trello:
+https://trello.com/b/oMv8Uec6/triage
+
 Best regards,
 Bart de Rijk
 
