@@ -7,7 +7,7 @@ module.exports = {
       enableInSFC: false
     }
   },
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/Triage/dist'
-    : '/'
+  publicPath: process.env.NODE_ENV === 'development'
+    ? '/'
+    : '/Triage/dist'
 }
