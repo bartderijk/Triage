@@ -12,10 +12,10 @@ cd dist
 # if you are deploying to a custom domain
 echo 'www.bartderijk.com' > CNAME
 
+git init
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:bartderijk/Triage.git
+git push -f git@github.com:bartderijk/Triage.git master:gh-pages
 
 cd -
