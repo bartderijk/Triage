@@ -1,10 +1,9 @@
 # Triage
 In my work as a first responder at the Red Cross, I found that doing the calculations for the triage can be challenging.
 Especially when there's a large number of victims, little time to spend per victim and stress levels are rising, this becomes an issue.
-Accurate calculations and correcte triaging are incredibly important, there's little to no margin for error.
+Accurate calculations and correct triaging are incredibly important, there's little to no margin for error.
 
-That's where I saw an opportunity to improve on accuracy and speed. This app takes the calculations out of the equation.
-All the user (first responder) has to do, is fill in the victim's parameters and the triage class is given automatically.
+That's where I saw an opportunity to improve on accuracy and speed. This app takes the calculations, and more importantly the human errors in that category, out of the equation. All the user (first responder) has to do, is fill in the victim's parameters and the triage class is given automatically.
 
 The app's development is currently ongoing, but the basic functionality is working.
 For more info, or getting involved in the project please reach out.
