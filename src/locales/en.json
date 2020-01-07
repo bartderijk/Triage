@@ -47,5 +47,10 @@
     "gcs": "Based on the GCS (EMV) of {gcs} a score of {score} was assigned",
     "sbp": "Based on the systolic blood pressure a score of {score} was assigned",
     "rr": "Based on the respiratory rate a score of {score} was assigned"
+  },
+  "topHeader": {
+    "gcs": "GCS",
+    "rts": "RTS",
+    "triage": "Triage"
   }
 }

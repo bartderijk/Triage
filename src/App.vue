@@ -1,9 +1,30 @@
 <template>
 <div :class="triageClass">
-  <div class="columns">
+  <nav class="level scores is-mobile">
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">{{ $t("topHeader.gcs") }}</p>
+        <p class="title is-4">{{ gcs}}</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">{{ $t("topHeader.rts") }}</p>
+        <p class="title is-4">{{ rts }}</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">{{ $t("topHeader.triage") }}</p>
+        <p class="title is-4 triage-class">{{ triageClass }}</p>
+      </div>
+    </div>
+  </nav>
+  <div class="columns calculator">
     <div class="column">
       <emvCalculator/>
     </div>
+    <hr>
     <div class="column">
       <rtsCalculator/>
     </div>
@@ -16,13 +37,14 @@
         is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
       </p>
     </div>
-</footer>
+  </footer>
 </div>
 </template>
 
 <script>
 import emvCalculator from './components/emvCalculator.vue'
 import rtsCalculator from './components/rtsCalculator.vue'
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'app',
@@ -31,6 +53,7 @@ export default {
     rtsCalculator
   },
   computed: {
+    ...mapGetters(['gcs', 'rts']),
     triageClass() {
       const rts = this.$store.getters.rts;
       if (rts === 12) {
@@ -49,9 +72,28 @@ export default {
 
 <style lang="scss">
   @import "../node_modules/bulma/bulma.sass";
+  
   .t1, .t2, .t3, .t4 { transition: background-color .3s ease-in-out; }
- .t1 { background-color: $red; }
- .t2 { background-color: $yellow; }
- .t3 { background-color: $green; }
- .t4 { background-color: $grey-lighter; }
+  .t1 { background-color: $red; }
+  .t2 { background-color: $yellow; }
+  .t3 { background-color: $green; }
+  .t4 { background-color: $grey-lighter; }
+
+  .scores {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 8px 0;
+    z-index: 100;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+  }
+
+  .triage-class {
+    text-transform: uppercase;
+  }
+
+  .calculator {
+    margin-top: 64px !important;
+  }
 </style>
