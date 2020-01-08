@@ -54,13 +54,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'EmvCalculator',
   computed: {
-    gcs() {
-      return this.$store.getters.gcs;
-    },
+    ...mapGetters(['gcs']),
     eye: {
       get() {
         return this.$store.state.eye
