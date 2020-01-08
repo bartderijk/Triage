@@ -36,9 +36,9 @@
 </template>
 
 <script>
-import EmvCalculator from './components/emvCalculator.vue'
-import RtsCalculator from './components/rtsCalculator.vue'
-import Footer from './components/footer.vue'
+import EmvCalculator from './components/EmvCalculator.vue'
+import RtsCalculator from './components/RtsCalculator.vue'
+import Footer from './components/Footer.vue'
 import { mapGetters } from 'vuex';
 
 export default {
