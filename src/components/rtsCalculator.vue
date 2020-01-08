@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'rtsCalculator',
+  name: 'RtsCalculator',
   computed: {
     gcs() {
       return this.$store.getters.gcs;

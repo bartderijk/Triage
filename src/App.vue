@@ -42,7 +42,7 @@ import Footer from './components/footer.vue'
 import { mapGetters } from 'vuex';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     EmvCalculator,
     RtsCalculator,
