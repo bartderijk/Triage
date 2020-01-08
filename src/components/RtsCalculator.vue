@@ -12,10 +12,10 @@
             <p class="help">{{ $t("helpText.gcs", { gcs: gcs, score: gcsRtsScore }) }}</p>
         </div>
         <div class="field">
-            <label class="label" for="sbp">{{ $t("labels.sbp", { score: sbpRtsScore }) }}</label>
+            <label class="label" for="sbp">{{ $t("labels.sbp", { score: systolicBloodPressureScore }) }}</label>
             <div class="control">
               <div class="select is-primary">
-                <select id="sbp" v-model.number="sbpRtsScore">
+                <select id="sbp" v-model.number="systolicBloodPressureScore">
                   <option value="4">> 89</option>
                   <option value="3">76-89</option>
                   <option value="2">50-75</option>
@@ -24,13 +24,13 @@
                 </select>
               </div>
             </div>
-            <p class="help">{{ $t("helpText.sbp", { score: sbpRtsScore }) }}</p>
+            <p class="help">{{ $t("helpText.sbp", { score: systolicBloodPressureScore }) }}</p>
         </div>
         <div class="field">
-          <label class="label" for="rr">{{ $t("labels.rr", { score: rrRtsScore }) }}</label>
+          <label class="label" for="rr">{{ $t("labels.rr", { score: respiratoryRateScore }) }}</label>
           <div class="control">
             <div class="select is-primary">
-              <select id="verbal" v-model.number="rrRtsScore">
+              <select id="verbal" v-model.number="respiratoryRateScore">
                 <option value="4">10-29</option>
                 <option value="3">> 29</option>
                 <option value="2">6-9</option>
@@ -40,35 +40,33 @@
             </div>
           </div>
         </div>
-        <p class="help">{{ $t("helpText.rr", { score: rrRtsScore }) }}</p>
+        <p class="help">{{ $t("helpText.rr", { score: respiratoryRateScore }) }}</p>
       </div>
   </section>
 </template>
 
 <script>
+import { mapGetters, mapMutations, mapState } from 'vuex';
+
 export default {
   name: 'RtsCalculator',
   computed: {
-    gcs() {
-      return this.$store.getters.gcs;
-    },
-    rts() { 
-      return this.$store.getters.rts;
-    },
-    sbpRtsScore: {
+    ...mapState(['sbpRtsScore', 'rrRtsScore']),
+    ...mapGetters(['gcs', 'rts']),
+    systolicBloodPressureScore: {
       get() {
-        return this.$store.state.sbpRtsScore;
+        return this.sbpRtsScore;
       },
       set(value) {
-        this.$store.commit('setSbpRtsScore', value);
+        this.setSbpRtsScore(value);
       }
     },
-    rrRtsScore: {
+    respiratoryRateScore: {
       get() {
-        return this.$store.state.rrRtsScore;
+        return this.rrRtsScore;
       },
       set(value) {
-        this.$store.commit('setRrRtsScore', value);
+        this.setRrRtsScore(value)
       }
     },
     gcsRtsScore() {
@@ -87,10 +85,13 @@ export default {
           gcsRtsScore = 0;
         }
 
-        this.$store.commit('setGcsRtsScore', gcsRtsScore);
+        this.setGcsRtsScore(gcsRtsScore);
         
         return gcsRtsScore;
     }
+  },
+  methods: {
+    ...mapMutations(['setSbpRtsScore', 'setRrRtsScore', 'setGcsRtsScore'])
   }
 }
 </script>
