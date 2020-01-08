@@ -2,9 +2,9 @@
     <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Triage</strong> by <a href="https://bartderijk.com">Bart de Rijk</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The application content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        <strong>{{ $t('footer.triage') }}</strong> {{ $t('footer.by') }} <a href="https://bartderijk.com">{{ $t('footer.bartDeRijk') }}</a>. 
+        {{ $t('footer.sourceIsLicenced') }} <a href="http://opensource.org/licenses/mit-license.php">{{ $t('footer.mit') }}</a>. 
+        {{ $t('footer.contentIsLicensed') }}  <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">{{ $t('footer.licenseAbbreviation') }}</a>.
       </p>
     </div>
   </footer>
