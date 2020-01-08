@@ -55,12 +55,11 @@ export default {
   computed: {
     ...mapGetters(['gcs', 'rts']),
     triageClass() {
-      const rts = this.$store.getters.rts;
-      if (rts === 12) {
+      if (this.rts === 12) {
         return 't3';
-      } else if (rts === 11) {
+      } else if (this.rts === 11) {
         return 't2';
-      } else if (rts >= 3 && rts <= 10) {
+      } else if (this.rts >= 3 && this.rts <= 10) {
         return 't1';
       } else {
         return 't4';
