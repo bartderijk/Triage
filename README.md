@@ -11,10 +11,10 @@ For more info, or getting involved in the project please reach out.
 Find the app's current state at http://www.bartderijk.com/Triage/
 
 On the todo list:
-- Getting a clear triage class output in the UI (T1, T2, T3, T4)
-- Adding some more pages and a navigation SPA style
+- Adding some more pages and a navigation SPA style, using Vue router
 - Improve visual candy
-- Testing (unit & e2e)
+- Extend unit tests
+- Add e2e tests
 - CI/CD
 - User testing
 - Promoting and getting it out there
