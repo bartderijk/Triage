@@ -4,6 +4,7 @@
         <h1 class="title">
           {{ $t("rtsScore", { score: rts }) }}
         </h1>
+
         <div class="field">
             <label class="label">{{ $t("labels.gcs", { score: gcsRtsScore }) }}</label>
             <div class="control">
@@ -11,6 +12,7 @@
             </div>
             <p class="help">{{ $t("helpText.gcs", { gcs: gcs, score: gcsRtsScore }) }}</p>
         </div>
+
         <div class="field">
             <label class="label" for="sbp">{{ $t("labels.sbp", { score: systolicBloodPressureScore }) }}</label>
             <div class="control">
@@ -26,6 +28,7 @@
             </div>
             <p class="help">{{ $t("helpText.sbp", { score: systolicBloodPressureScore }) }}</p>
         </div>
+
         <div class="field">
           <label class="label" for="rr">{{ $t("labels.rr", { score: respiratoryRateScore }) }}</label>
           <div class="control">
@@ -39,8 +42,8 @@
               </select>
             </div>
           </div>
+          <p class="help">{{ $t("helpText.rr", { score: respiratoryRateScore }) }}</p>
         </div>
-        <p class="help">{{ $t("helpText.rr", { score: respiratoryRateScore }) }}</p>
       </div>
   </section>
 </template>

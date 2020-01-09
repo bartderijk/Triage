@@ -4,6 +4,7 @@
         <h1 class="title">
           {{ $t("gcsScore", { score: gcs }) }}
         </h1>
+
         <div class="field">
             <label class="label" for="eye">{{ $t("labels.eye", { score: eyeScore }) }}</label>
             <div class="control">
@@ -18,6 +19,7 @@
             </div>
             <p v-if="eye" class="help">{{ helpTextEye }}</p>
         </div>
+
         <div class="field">
             <label class="label" for="motor">{{ $t("labels.motor", { score: motorScore }) }}</label>
             <div class="control">
@@ -34,6 +36,7 @@
             </div>
             <p v-if="motor" class="help">{{ helpTextMotor }}</p>
         </div>
+
         <div class="field">
           <label class="label" for="verbal">{{ $t("labels.verbal", { score: verbalScore }) }}</label>
           <div class="control">
